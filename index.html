@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat App</title>
+    <script type="text/javascript">
+      var messages = [];
+      var numMessages = 0;
+
+      function handleNewMessage(e) {
+        e.preventDefault();
+        var newMessage = document.getElementById("message").value;
+        numMessages = numMessages + 1;
+        messages.push(newMessage);
+        console.log(numMessages, messages);
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Chats</h1>
+    <div class="Chat-screen">
+      <ul>
+        <li>Hi!!</li>
+        <li>Hello</li>
+      </ul>
+    </div>
+    <div>
+      <form onsubmit="handleNewMessage(event)">
+        <input
+          id="message"
+          type="type"
+          name="message"
+          placeholder="Type your message here"
+        />
+      </form>
+    </div>
+  </body>
+</html>
